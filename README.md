@@ -1,2 +1,2 @@
 # hackatonrsxp
-programem, desgraçados!
+Vamos lá, galerinha!
