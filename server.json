@@ -1,0 +1,47 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "type": "se",
+      "questionText": "Gostaria de criar seus próprios aplicativos?",
+      "weight": "2"
+    },
+    {
+      "id": 3,
+      "type": "ce",
+      "questionText": "Gosta de mexer nas peças do computador?",
+      "weight": "2"
+    },
+    {
+      "id": 4,
+      "type": "de",
+      "questionText": "Gostaria de trabalhar com matemática?",
+      "weight": "2"
+    },
+    {
+      "id": 5,
+      "type": "se",
+      "questionText": "Gostaria de aprender a automatizar tarefas no mundo da computação",
+      "weight": "3"
+    },
+    {
+      "id": 6,
+      "type": "ce",
+      "questionText": "Tem interesse em construir aparelhos eletrônicos (drones, robôs)",
+      "weight": "3"
+    },
+    {
+      "id": 7,
+      "type": "de",
+      "questionText": "Se interessa por inteligência artificial?",
+      "weight": "3"
+    },
+    {
+      "id": 8,
+      "type": "se",
+      "questionText": "Que tal poder trabalhar em casa para clientes ao redor do mundo",
+      "weight": "3"
+    }
+  ],
+  "pages": []
+}
