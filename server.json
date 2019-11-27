@@ -62,5 +62,13 @@
       "type": "de",
       "text": "A internet é um universo infinito, somente o Facebook gera mais de 500 TB de dados por dia e em meio a tanta informação,  dos mais de 2,2 bilhões de usuários mensais, a aplicação da engenharia de dados"
     }
+  ],
+  "school": [
+    {
+      "id": 1,
+      "logo": "https://avatars0.githubusercontent.com/u/28929274?s=200&v=4",
+      "name": "RocketSeat",
+      "link": "https://rocketseat.com.br/"
+    }
   ]
 }
