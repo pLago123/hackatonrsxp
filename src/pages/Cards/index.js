@@ -9,7 +9,7 @@ import QuestionCard from '../../components/Card';
 import { Container, Row, Title } from './styles';
 import Background from '../../components/Background';
 
-const Cards = () => {
+const Cards = ({ navigation }) => {
   const swiper = useRef();
   const [cards, setCards] = useState([]);
   const [weight, setWeight] = useState({ se: 0, ce: 0, de: 0 });
@@ -57,7 +57,11 @@ const Cards = () => {
       }
     });
 
-    return profession;
+    api.get('pages').then(res => {
+      const { data } = res;
+      const page = data.filter(d => d.type === profession);
+      navigation.navigate('Specialty', { profession: page });
+    });
   };
 
   return (
@@ -71,19 +75,19 @@ const Cards = () => {
             height: 300,
           }}
           ref={swiper}
-          onSwipedAll={() => alert(finish())}
+          onSwipedAll={() => finish()}
         >
           {renderCards()}
         </CardStack>
         <Row>
           <View>
             <TouchableOpacity onPress={() => swiper.current.swipeLeft()}>
-              <Icon name="close" size={60} color="red" />
+              <Icon name="close" size={50} color="#ff1500" />
             </TouchableOpacity>
           </View>
           <View>
             <TouchableOpacity onPress={() => swiper.current.swipeRight()}>
-              <Icon name="check" size={60} color="green" />
+              <Icon name="check" size={50} color="#00ff1a" />
             </TouchableOpacity>
           </View>
         </Row>

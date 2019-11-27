@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Container,
@@ -12,6 +12,16 @@ import {
 import Background from '../../components/Background';
 
 const Home = ({ navigation }) => {
+  const [email, setEmail] = useState();
+
+  const next = () => {
+    if (!email) {
+      alert('Digite seu e-mail!');
+    } else {
+      navigation.navigate('Intro');
+    }
+  };
+
   return (
     <Background>
       <Container>
@@ -28,8 +38,10 @@ const Home = ({ navigation }) => {
             autoCapitalize="none"
             placeholder="Digite seu e-mail"
             returnKeyType="next"
+            value={email}
+            onChangeText={text => setEmail(text)}
           />
-          <SubmitButton onPress={() => navigation.navigate('Intro')}>
+          <SubmitButton onPress={() => next()}>
             <SubmitButtonText>Acessar</SubmitButtonText>
           </SubmitButton>
         </Wrap>

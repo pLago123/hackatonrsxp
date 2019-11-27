@@ -12,6 +12,7 @@ export const QuestionCard = styled(Card)`
 `;
 
 export const CardText = styled.Text`
-  color: #fc0061;
+  color: #333;
+  font-family: 'Trebuchet MS';
   font-size: 32px;
 `;
