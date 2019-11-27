@@ -3,9 +3,10 @@ import { View } from 'react-native';
 import CardStack from 'react-native-card-stack-swiper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import api from '../../services/api';
 import QuestionCard from '../../components/Card';
-import { Container, Row } from './styles';
+import { Container, Row, Title } from './styles';
 import Background from '../../components/Background';
 
 const Cards = () => {
@@ -61,6 +62,7 @@ const Cards = () => {
 
   return (
     <Background>
+      <Title>Technator</Title>
       <Container>
         <CardStack
           style={{
@@ -75,10 +77,14 @@ const Cards = () => {
         </CardStack>
         <Row>
           <View>
-            <Icon name="close" size={50} color="red" />
+            <TouchableOpacity onPress={() => swiper.current.swipeLeft()}>
+              <Icon name="close" size={60} color="red" />
+            </TouchableOpacity>
           </View>
           <View>
-            <Icon name="check" size={50} color="green" />
+            <TouchableOpacity onPress={() => swiper.current.swipeRight()}>
+              <Icon name="check" size={60} color="green" />
+            </TouchableOpacity>
           </View>
         </Row>
       </Container>

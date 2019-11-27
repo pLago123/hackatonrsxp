@@ -29,7 +29,7 @@ const Home = ({ navigation }) => {
             placeholder="Digite seu e-mail"
             returnKeyType="next"
           />
-          <SubmitButton onPress={() => navigation.navigate('Cards')}>
+          <SubmitButton onPress={() => navigation.navigate('Intro')}>
             <SubmitButtonText>Acessar</SubmitButtonText>
           </SubmitButton>
         </Wrap>
